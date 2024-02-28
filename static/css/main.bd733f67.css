@@ -1,0 +1,25 @@
+*{box-size:border-box;margin:0;padding:0}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif}code{font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}body{--black:#000;--ash-black:#222;--white:#fff;--sky:#0cf;--green:#2dd;--blue:#1300ff;--dusk:#60f;--purple:#90f;--pink:#f06;--red:#f20505;--orange:#fd7702;--yellow:#fb0;--khaki:#747264;--gray:#8c8c88;--salmon:#f2674e;--background:#f2f1f0;--accent:var(--salmon);margin:0;overflow-x:hidden;padding:0}li,ul{list-style:none}.progress-bar{background:var(--khaki);height:.5rem;left:0;position:fixed;right:0;top:0;transform-origin:0}a{color:var(--accent);text-decoration:none}
+/*    !*--base-width: 8.2vw;*!*/
+/*    !*font-size: 8rem;*!*/
+/*    !*font-weight: 700;*!*/
+/*    !*line-height: 1.2;*!*/
+/*    !*text-align: center;*!*/
+/*    !*margin: 100px 0;*!*/
+/*    !*white-space: nowrap;*!*/
+/*    !*position: absolute;*!*/
+/*    !*top: -10vw;*!*/
+/*    !*left: 50%;*!*/
+/*    !*transform: translateX(-50%);*!*/
+/*    !*letter-spacing: -0.15rem;*!*/
+/*    !*font-size: clamp(20px, var(--base-width), 700px);*!*/
+
+/*!*img {*!*/
+/*!*    position: absolute;*!*/
+/*!*    top: 0;*!*/
+/*!*    left: 0;*!*/
+/*!*    right: 0;*!*/
+/*!*    bottom: 0;*!*/
+/*!*    width: 100%;*!*/
+/*!*    height: 100%;*!*/
+/*!*}*!*/
+/*# sourceMappingURL=main.bd733f67.css.map*/
