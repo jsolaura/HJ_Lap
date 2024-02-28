@@ -11,6 +11,7 @@ const StyledAbout = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 0 1rem;
   h1 {
     font-size: 2.5rem;
     color: var(--ash-black);

@@ -20,7 +20,7 @@ export const pointList: PointData[] = [
     {
         color: '#EA5E46',
         title: 'plus',
-        description: 'Ao PRO는 \n다이나믹한 컬러로 열정적인 느낌과 \n자유로운 느낌으로 구성되었습니다. \n아이디어를 더해보세요.',
+        description: 'Aº PRO는 \n다이나믹한 컬러로 열정적인 느낌과 \n자유로운 느낌으로 구성되었습니다. \n아이디어를 더해보세요.',
         keywords: ['creative', 'dynamic'],
         imgUrl: '3.jpg',
         itemList: ['AºDESK', 'FLIX SCREEN', 'MONITOR ARM', 'HANGING STORAGE', 'PC STAND'],

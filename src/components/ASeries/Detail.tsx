@@ -6,21 +6,21 @@ import {pointList} from "../../constans/data";
 
 const StyledContainer = styled.div`
   position: relative;
-  //margin-top: 25vh;
-  padding: 10% 10% 5%;
+  padding: 10%;
   color: var(--black);
 
   .description {
     display: flex;
-    height: 700px;
+    flex-direction: column;
     justify-content: space-between;
     gap: 5%;
     .stickyContainer {
       position: relative;
-      width: 60%;
+      width: 50%;
       height: auto;
       display: flex;
       flex-direction: column;
+      z-index: 100;
       img {
         width: 100%;
         object-fit: contain;
@@ -36,7 +36,6 @@ const StyledContainer = styled.div`
           padding: 0.5rem 1rem;
           border-radius: 10px;
         }
-        
       }
     } 
     .infoBox {
@@ -44,7 +43,7 @@ const StyledContainer = styled.div`
       height: 100%;
       white-space: pre-line;
       line-height: 1.5;
-      width: 40%;
+      width: 100%;
       align-items: flex-end;
       justify-content: flex-end;
       flex-direction: column;
@@ -62,7 +61,6 @@ const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-top: 100px;
     .itemEl{
       width: 100%;
       text-transform: uppercase;
@@ -90,10 +88,9 @@ const Detail = () => {
         ScrollTrigger.create({
             trigger: stickyContainer.current,
             pin: true,
-            start: 'top-=200px',
-            end: document.body.offsetHeight - window.innerHeight - 50
+            start: 'top-=100px',
+            end: document.body.offsetHeight - window.innerHeight + 300
         })
-
     }, [])
     return (
         <StyledContainer ref={container}>
@@ -106,13 +103,10 @@ const Detail = () => {
                         ))}
                     </p>
                 </div>
-                {/*<div className='column'>*/}
-                {/*    <p>The flora is characterized by the presence of high elevation wetland, as well as yellow straw, broom sedge, tola de agua and tola amaia.</p>*/}
-                {/*</div>*/}
+
                 <div className='infoBox'>
                     <p>{pointList[selectedItem].description}</p>
                     <p className='itemList'>ITEM LIST : {pointList[selectedItem].itemList.join('∙')}</p>
-                    {/*<p>Some, like the southern viscacha, vicuña and Darwins rhea, are classified as endangered species. Others, such as Andean goose, horned coot, Andean gull, puna tinamou and the three flamingo species inhabiting in Chile (Andean flamingo, Chilean flamingo, and Jamess flamingo) are considered vulnerable.</p>*/}
                 </div>
             </div>
             <div className='pointList'>
