@@ -1,25 +1,20 @@
 {
   "files": {
     "main.css": "/hj-lap/static/css/main.bd733f67.css",
-    "main.js": "/hj-lap/static/js/main.15f8eff9.js",
+    "main.js": "/hj-lap/static/js/main.38c0c712.js",
     "static/media/texture.jpg": "/hj-lap/static/media/texture.93d35ad0d5cc4275b712.jpg",
     "static/media/diversity.mp4": "/hj-lap/static/media/diversity.0697439535de6442559f.mp4",
     "static/media/3.jpg": "/hj-lap/static/media/3.2bdffe125bf3c3f76c71.jpg",
     "static/media/texture2.jpg": "/hj-lap/static/media/texture2.34b25f2cf4bdeb61599b.jpg",
     "static/media/2.jpg": "/hj-lap/static/media/2.4d9917473ab8a5e49879.jpg",
-    "static/media/background.jpeg": "/hj-lap/static/media/background.3e5ebfdc93f495f548ef.jpeg",
-    "static/media/1.jpg": "/hj-lap/static/media/1.80d8d34df1817920de39.jpg",
-    "static/media/4.jpg": "/hj-lap/static/media/4.77d6b75b947e0a9a20ec.jpg",
-    "static/media/2.jpeg": "/hj-lap/static/media/2.4a148ef64ebc67d5ec47.jpeg",
-    "static/media/3.jpeg": "/hj-lap/static/media/3.0ab20f899b20e39f396d.jpeg",
-    "static/media/intro.png": "/hj-lap/static/media/intro.51821f95bedb419de0ee.png",
+    "static/media/1.jpg": "/hj-lap/static/media/1.1cf5a219707120f2fb20.jpg",
     "index.html": "/hj-lap/index.html",
     "static/media/fish.svg": "/hj-lap/static/media/fish.05e302a064929edfb239.svg",
     "main.bd733f67.css.map": "/hj-lap/static/css/main.bd733f67.css.map",
-    "main.15f8eff9.js.map": "/hj-lap/static/js/main.15f8eff9.js.map"
+    "main.38c0c712.js.map": "/hj-lap/static/js/main.38c0c712.js.map"
   },
   "entrypoints": [
     "static/css/main.bd733f67.css",
-    "static/js/main.15f8eff9.js"
+    "static/js/main.38c0c712.js"
   ]
 }
