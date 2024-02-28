@@ -4,4 +4,6 @@ export interface PointData {
     description: string;
     modeling?: string;
     keywords: string[];
+    imgUrl?: string;
+    itemList: string[];
 }

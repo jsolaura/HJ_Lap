@@ -16,9 +16,7 @@ const StyledAbout = styled.div`
     color: var(--ash-black);
     letter-spacing: 2px;
     padding: 1rem 4rem;
-    position: absolute;
-    top: 100px;
-    left: 200px;
+    margin-right: auto;
     span {
       display: block;
       padding-left: 2rem;
@@ -28,9 +26,11 @@ const StyledAbout = styled.div`
   ul {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     margin-top: 10%;
+    gap: 2rem;
       .item {
         display: flex;
         flex-direction: column;
@@ -59,35 +59,38 @@ const StyledAbout = styled.div`
     
   }
 `;
-
-const About =  () => {
-    const { ref, inView } = useInView({
-        triggerOnce: true,
+const fadeInAnimationVariants = {
+    initial: {
+        opacity: 0,
+        y: 100,
+    },
+    animate: (index: number) => ({
+        opacity: 1,
+        y: 0,
+        transition: {
+            delay: 0.2 * index
+        }
     })
-    const imageVariants = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 },
-    }
 
-    const animationDelay = 0.8;
+}
+const About =  () => {
+    const { ref, inView } = useInView({})
     return (
-        <StyledAbout>
+        <StyledAbout ref={ref}>
             <motion.h1
                 animate={{ opacity: inView ? 1 : 0, left: inView ? 0 : -100 }}
                 transition={{ duration: 1 }}
-                ref={ref}
             >
                 ABOUT <span>Aº SERIES</span>
             </motion.h1>
             <ul>
                 {pointList.map((point, index) => (
                     <motion.li
-
-                        initial="hidden"
-                        variants={imageVariants}
-                        animate={inView ? "visible" : "hidden"}
+                        initial='initial'
+                        key={index}
+                        variants={fadeInAnimationVariants}
+                        whileInView='animate'
                         custom={index}
-                        transition={{delay: index * animationDelay}}
                         className='item'
                     >
                         <div className='circle' style={{ background: point.color }} />

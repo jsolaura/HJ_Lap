@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {motion} from "framer-motion";
 import styled from "styled-components";
+import {useInView} from "react-intersection-observer";
 const StyledArticle = styled.article`
   width: 100vw;
   height: 100vh;
@@ -23,10 +24,24 @@ const StyledArticle = styled.article`
     transform: translate(-50%, -50%);
   }
 `;
+const rotateAnimationVariants = {
+    animate: {
+        scale: [1, 2, 2, 1, 1],
+        rotate: [0, 0, 180, 180, 0],
+        borderRadius: ["0%", "0%", "50%", "50%", "0%"]
+    },
+    transition: {
+        duration: 2,
+        ease: "easeInOut",
+        times: [0, 0.2, 0.5, 0.8, 1],
+    }
+
+}
 
 const Main = () => {
+    const { ref } = useInView({})
     return (
-        <StyledArticle>
+        <StyledArticle ref={ref}>
             <motion.div
                 className="box"
                 animate={{
@@ -38,8 +53,8 @@ const Main = () => {
                     duration: 2,
                     ease: "easeInOut",
                     times: [0, 0.2, 0.5, 0.8, 1],
-                    repeatDelay: 10
                 }}
+                whileInView={['animate', 'transition']}
             >
             </motion.div>
             <h1>Aº <br/>SERIES</h1>
