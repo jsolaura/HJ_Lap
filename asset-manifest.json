@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/hj-lap/static/css/main.bd733f67.css",
-    "main.js": "/hj-lap/static/js/main.9d0aec3a.js",
+    "main.css": "/hj-lap/static/css/main.f2e08615.css",
+    "main.js": "/hj-lap/static/js/main.43f47161.js",
     "static/media/texture.jpg": "/hj-lap/static/media/texture.93d35ad0d5cc4275b712.jpg",
     "static/media/diversity.mp4": "/hj-lap/static/media/diversity.0697439535de6442559f.mp4",
     "static/media/3.jpg": "/hj-lap/static/media/3.2bdffe125bf3c3f76c71.jpg",
@@ -10,11 +10,11 @@
     "static/media/1.jpg": "/hj-lap/static/media/1.1cf5a219707120f2fb20.jpg",
     "index.html": "/hj-lap/index.html",
     "static/media/fish.svg": "/hj-lap/static/media/fish.05e302a064929edfb239.svg",
-    "main.bd733f67.css.map": "/hj-lap/static/css/main.bd733f67.css.map",
-    "main.9d0aec3a.js.map": "/hj-lap/static/js/main.9d0aec3a.js.map"
+    "main.f2e08615.css.map": "/hj-lap/static/css/main.f2e08615.css.map",
+    "main.43f47161.js.map": "/hj-lap/static/js/main.43f47161.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd733f67.css",
-    "static/js/main.9d0aec3a.js"
+    "static/css/main.f2e08615.css",
+    "static/js/main.43f47161.js"
   ]
 }
