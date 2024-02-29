@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/hj-lap/a-series/static/css/main.f2e08615.css",
-    "main.js": "/hj-lap/a-series/static/js/main.ce0742cd.js",
+    "main.js": "/hj-lap/a-series/static/js/main.df9c6bcd.js",
     "static/media/texture.jpg": "/hj-lap/a-series/static/media/texture.93d35ad0d5cc4275b712.jpg",
     "static/media/diversity.mp4": "/hj-lap/a-series/static/media/diversity.0697439535de6442559f.mp4",
     "static/media/3.jpg": "/hj-lap/a-series/static/media/3.2bdffe125bf3c3f76c71.jpg",
@@ -11,10 +11,10 @@
     "index.html": "/hj-lap/a-series/index.html",
     "static/media/fish.svg": "/hj-lap/a-series/static/media/fish.05e302a064929edfb239.svg",
     "main.f2e08615.css.map": "/hj-lap/a-series/static/css/main.f2e08615.css.map",
-    "main.ce0742cd.js.map": "/hj-lap/a-series/static/js/main.ce0742cd.js.map"
+    "main.df9c6bcd.js.map": "/hj-lap/a-series/static/js/main.df9c6bcd.js.map"
   },
   "entrypoints": [
     "static/css/main.f2e08615.css",
-    "static/js/main.ce0742cd.js"
+    "static/js/main.df9c6bcd.js"
   ]
 }
