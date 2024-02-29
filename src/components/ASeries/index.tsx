@@ -22,10 +22,6 @@ const Index = () => {
             <Main />
             <About />
             <Detail />
-            {/*<article style={{ height: '200vh', borderBottom: '1px solid salmon' }}/>*/}
-            {/*<article style={{ height: '200vh', borderBottom: '1px solid salmon' }}/>*/}
-            {/*<article style={{ height: '200vh', borderBottom: '1px solid salmon' }}/>*/}
-            {/*<article style={{ height: '200vh' }}/>*/}
         </StyledSection>
     );
 };

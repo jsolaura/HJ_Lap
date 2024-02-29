@@ -36,6 +36,7 @@ const StyledContainer = styled.div`
     } 
     .infoBox {
       width: 35%;
+      height: 250px;
       margin-left: auto;
       display: flex;
       white-space: pre-line;
