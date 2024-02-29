@@ -1,28 +1,24 @@
-import React, {useLayoutEffect, useRef, useState} from 'react';
+import React, {useRef, useState} from 'react';
 import styled from "styled-components";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {pointList} from "../../constans/data";
 
 const StyledContainer = styled.div`
   position: relative;
-  padding: 10%;
+  padding: 100px;
   color: var(--black);
-
+  
   .description {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 5%;
     .stickyContainer {
-      position: relative;
-      width: 50%;
+      position: sticky;
+      position: -webkit-sticky;
+      top: 100px;
+      left: 100px;
+      width: 60%;
       height: auto;
-      display: flex;
-      flex-direction: column;
-      z-index: 100;
+      z-index: 50;
       img {
         width: 100%;
+        height: auto;
         object-fit: contain;
         margin-bottom: 1rem;
       }
@@ -39,11 +35,11 @@ const StyledContainer = styled.div`
       }
     } 
     .infoBox {
+      width: 35%;
+      margin-left: auto;
       display: flex;
-      height: 100%;
       white-space: pre-line;
       line-height: 1.5;
-      width: 100%;
       align-items: flex-end;
       justify-content: flex-end;
       flex-direction: column;
@@ -56,23 +52,27 @@ const StyledContainer = styled.div`
         color: var(--gray);
       }
     }
-  }
-  .pointList {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    .itemEl{
-      width: 100%;
-      text-transform: uppercase;
-      font-size: 3vw;
-      border-bottom: 1px solid black;
+    .pointList {
       display: flex;
-      justify-content: flex-end;
-    }
-    .itemEl h2{
-      margin-top: 40px;
-      margin-bottom: 20px;
-      cursor: pointer;
+      flex-direction: column;
+      position: relative;
+      margin-top: 100px;
+      .itemEl{
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 3vw;
+        border-bottom: 1px solid black;
+        display: flex;
+        justify-content: flex-end;
+        &:first-child {
+          border-top: 1px solid black;
+        }
+      }
+      .itemEl h2{
+        margin-top: 40px;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
     }
   }
 `;
@@ -80,22 +80,10 @@ const StyledContainer = styled.div`
 
 const Detail = () => {
     const [selectedItem, setSelectedItem] = useState<number>(0);
-    const container = useRef(null);
-    const stickyContainer = useRef(null);
-
-    useLayoutEffect(() => {
-        gsap.registerPlugin(ScrollTrigger);
-        ScrollTrigger.create({
-            trigger: stickyContainer.current,
-            pin: true,
-            start: 'top-=100px',
-            end: document.body.offsetHeight - window.innerHeight + 300
-        })
-    }, [])
     return (
-        <StyledContainer ref={container}>
+        <StyledContainer>
             <div className='description'>
-                <div ref={stickyContainer} className='stickyContainer'>
+                <div className='stickyContainer'>
                     <img src={require(`../../assets/images/${pointList[selectedItem].imgUrl}`)} alt={pointList[selectedItem].title}/>
                     <p>
                         {pointList[selectedItem].keywords.map((keyword, index) => (
@@ -108,13 +96,13 @@ const Detail = () => {
                     <p>{pointList[selectedItem].description}</p>
                     <p className='itemList'>ITEM LIST : {pointList[selectedItem].itemList.join('∙')}</p>
                 </div>
-            </div>
-            <div className='pointList'>
-                {pointList.map((item, index) => (
-                    <div key={index} onMouseOver={() => {setSelectedItem(index)}} className='itemEl'>
-                        <h2>{item.title}</h2>
-                    </div>
-                ))}
+                <div className='pointList'>
+                    {pointList.map((item, index) => (
+                        <div key={index} onMouseOver={() => {setSelectedItem(index)}} className='itemEl'>
+                            <h2>{item.title}</h2>
+                        </div>
+                    ))}
+                </div>
             </div>
         </StyledContainer>
     );

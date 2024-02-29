@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {FC, useState} from 'react';
 import { motion } from 'framer-motion';
 import fish from '../assets/images/fish.png';
 import background from '../assets/images/texture.jpg';
@@ -23,17 +23,33 @@ const StyledWrapper = styled.section`
     left: 0;
     z-index: -50;
   }
+  video {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -50;
+    object-fit: cover;
+  }
+  ul {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+    li {
+      font-size: 1.5rem;
+      a {
+        transition: all .35s;
+      }
+    }
+    li:hover a {
+      color: var(--red);
+    }
+    
+  }
 `;
 
-const StyledVideo = styled.video`
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -50;
-  object-fit: cover;
-`;
 
 const StyledH1 = styled(motion.h1)`
   --base-width: 8.2vw;
@@ -56,29 +72,12 @@ const StyledH1 = styled(motion.h1)`
   }
 `;
 
-const StyledUl = styled.ul`
-  display: flex;
-  //flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  gap: 2rem;
-  li {
-    font-size: 1.5rem;
-    a {
-      transition: all .35s;
-    }
-  }
-  li:hover a {
-    color: var(--red);
-  }
-`;
-
 const Home = () => {
     const [isVideo, setIsVideo] = useState<boolean>(false);
     return (
         <StyledWrapper>
             <img className='background' src={background} alt='background' />
-            {isVideo && <StyledVideo autoPlay muted><source src={diversity} type='video/mp4'/></StyledVideo>}
+            {isVideo && <video autoPlay muted><source src={diversity} type='video/mp4'/></video>}
             <motion.article
                 initial='hidden'
                 animate='visible'
@@ -101,14 +100,14 @@ const Home = () => {
                     </div>
                     DESIGN <b className='bold'>LENOK</b>
                 </StyledH1>
-                <StyledUl>
+                <ul>
                     <motion.li variants={itemVariants}>
                         <Link to="/a-series">Aº 시리즈_240225_131024</Link>
                     </motion.li>
                     <motion.li variants={itemVariants}>
                         <Link to="/london">White lines of Canary Wharf</Link>
                     </motion.li>
-                </StyledUl>
+                </ul>
             </motion.article>
         </StyledWrapper>
     );

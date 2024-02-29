@@ -3,7 +3,7 @@ import './App.css';
 import {useLocation, useRoutes} from "react-router-dom";
 import Home from "./components/Home";
 import {AnimatePresence} from "framer-motion";
-import Index from "./components/ASeries";
+import ASeries from "./components/ASeries";
 
 function App() {
     const location = useLocation();
@@ -14,7 +14,7 @@ function App() {
         },
         {
             path: '/a-series',
-            element: <Index />
+            element: <ASeries />
         },
 
     ])
