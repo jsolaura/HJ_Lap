@@ -2,7 +2,7 @@
   "name": "hj-lap",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jsolaura.github.io/hj-lap/a-series",
+  "homepage": "https://jsolaura.github.io/hj-lap/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
