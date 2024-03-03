@@ -10,7 +10,8 @@ function App() {
     const element = useRoutes([
         {
             path: '/',
-            element: <Home />
+            // element: <Home />
+            element: <ASeries />
         },
         {
             path: '/a-series',
